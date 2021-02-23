@@ -2,31 +2,115 @@
 <html>
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>第一週功課</title>
 <style type="text/css">
 .up{
   background-color:#00E3E3;font-size:40px;text-align:center;height:300px;line-height:300px;
   }
-.box{
-  position:absolute;right:5px;top:5px;
+
+  nav{
+	display:flex;
+	}
+	nav>.menu{
+	justify-content:end;
+	width:50px;
+	}
+	nav>.my{
+	flex:auto;
+	}
+	.omg{
+	width:1200px;
+	margin-right:auto;margin-left:auto;
+	}
+	div.gallery{
+	margin:5px;
+	float:left;
+	width:290px;
+	}
+	div.gallery img{
+	width:100%;
+	height:200px;
+	}
+	div.desc{
+	margin-top:-5px;
+	padding:15px;
+	text-align:center;
+	background-color:#00E3E3;
+	}
+ 
+	
+	@media screen and (max-width:1200px){
+	.omg{
+	width:90%;
+	}
+  div.gallery{
+  width:45%}
   }
-.imgbox{
-  width:1200px;margin-left:auto;margin-right:auto;
+  word{
+  width:45%;
   }
-.img{
-  width:280px;margin:10px
+  
+   @media screen and (max-width:600px){
+   .omg{
+   width:90%;
+   }
+  div.gallery{
+  width:90%}
+  nav>.menu{
+  display:none;
   }
+  }
+  
   
 </style>
 </head>
 <body>
-<div class="box">Item1   Item2   Item3   Item4</div>
-<div class="font-size=20px;position:absolute;left:5px;top:5px;">My Website</div>
+<nav>
+	<div class="my">My Website</div>
+	<div class="menu">item1</div>
+	<div class="menu">item2</div>
+	<div class="menu">item3</div>
+	<div class="menu">item4</div>
+	</nav>
+
+
+
 <div class="up">Welcome to MyHome</div>
-<div class="imgbox">
-<div class="img">
-<img src="https://inews.gtimg.com/newsapp_bt/0/9963183961/1000" alt="">
-  </div>
-  </div>
+<div class="omg">
+<div class="gallery">
+	<img src="https://inews.gtimg.com/newsapp_bt/0/9963183961/1000" width="600" height="400">
+	<div class="desc">河鉉雨</div>
+</div>
+<div class="gallery">
+	<img src="https://mummumzine.files.wordpress.com/2016/10/e6b885e7b494e5bcb5e99ba8e7949f.jpg?w=940" width="600" height="400">
+	<div class="desc">張雨生</div>
+</div>
+<div class="gallery">
+	<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/00000-1583332055.jpg?crop=0.502xw:1.00xh;0,0&resize=640:*" width="600" height="400">
+	<div class="desc">權娜拉</div>
+</div>
+<div class="gallery">
+	<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/page-1608106032.jpg?crop=0.497xw:0.993xh;0.503xw,0.00656xh&resize=640:*" width="600" height="400">
+	<div class="desc">金世正</div>
+ </div>
+<div class="gallery"> 
+	<img src="https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5ea87c81c371c.jpg" width="600" height="400">
+	<div class="desc">麥可喬丹</div>
+</div>	
+<div class="gallery">  
+	<img src="https://hips.hearstapps.com/amv-prod-elletw.s3.amazonaws.com/new-dossier/_1_60335.jpg?resize=480:*" width="600" height="400">
+	<div class="desc">傑克葛倫霍</div>
+</div>	
+<div class="gallery"> 
+	<img src="https://runrun.com.hk/wp-content/uploads/2019/09/image001-9-1024x684.png" width="600" height="400">
+	<div class="desc">肯納尼薩·貝克勒</div>
+</div>	
+<div class="gallery">  
+	<img src="https://5b0988e595225.cdn.sohucs.com/images/20180227/4fe76f2d77ce463e824dbee7ad71b32e.jpeg" width="600" height="400">
+	<div class="desc">李連杰</div>
+</div>
+</div>
+ 
 </body>
 </html>
