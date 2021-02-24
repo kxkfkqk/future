@@ -1,114 +1,110 @@
-<!DocTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>第一週功課</title>
 <style type="text/css">
-.up{
-  background-color:#00E3E3;font-size:40px;text-align:center;height:300px;line-height:300px;
-  }
-  .icon{
-	position:absolute;top:0px;right:0px;
-	height:30px;
-	display:none;
-	}
-	.icon2{
-	background-color:#FFAF60;
-	width:25px;
-	height:3px;
-	margin:5px;
-	}
-	.burgermenu{
-	
-	background-color: #ffffff;
-	height: 80px;
-	width: 20px;
-	position: absolute;
-	top: 10px;
-	right: 8px;
-	
-	
-	}
-	#nothing:checked ~ .burgermenu{
+.up{				/* 大框框主題*/
+	background-color:#00E3E3;font-size:40px;text-align:center;height:300px;line-height:300px;
+		}
+		
+.icon{      /* 漢堡選單容器 */
+		position:absolute;top:0px;right:0px;
+		height:30px;
+		display:none;
+		}
+		
+.icon2{     /*  漢堡線 */
+		background-color:#FFAF60;
+		width:25px;
+		height:3px;
+		margin:5px;
+		}
+		
+.burgermenu{    /*  漢堡後清單  */
+			display:none;
+			background-color: #ffffff;
+			height: 80px;
+			width: 20px;
+			position: absolute;
+			top: 10px;
+			right: 8px;
+			}
+	/* #nothing:checked ~ .burgermenu{
 	transform: translateX(100%);
-	}
-	#nothing{
+	} */
 	
-	}
+#nothing{   		/* 隱藏checkbox*/
+			display:none;
+			}
 
-
-  nav{
-	display:flex;
-	}
-	nav>.menu{
-	justify-content:end;
-	width:50px;
-	}
-	nav>.my{
-	flex:auto;
-	}
-	.omg{
-	width:1200px;
-	margin-right:auto;margin-left:auto;
-	}
-	div.gallery{
-	margin:5px;
-	float:left;
-	width:290px;
-	}
-	div.gallery img{
-	width:100%;
-	height:200px;
-	}
-	div.desc{
-	margin-top:-5px;
-	padding:15px;
-	text-align:center;
-	background-color:#00E3E3;
-	}
+.list{     /*漢堡前清單容器*/
+		position:absolute;top:7px;right:0px;
+		display:flex;
+		}
+		
+.menu{		/*漢堡前清單*/
+		justify-content:end;
+		width:50px;
+		}
+	
+.photot{		/*  照片容器 */
+		width:1200px;
+		margin-right:auto;margin-left:auto;
+		}
+div.gallery{		/* 連結文字及圖片的容器*/
+			margin:5px;
+			float:left;		/* 沒有滿的情況會在同一行且靠左*/
+			width:290px;
+			}
+div.gallery img{		/* 圖片使尺寸設定 */
+				width:100%;
+				height:200px;
+				}
+div.desc{			/* 文字設定 */
+			margin-top:-5px;
+			padding:15px;
+			text-align:center;
+			background-color:#00E3E3;
+			}
  
-	
-	@media screen and (max-width:1200px){
-	.omg{
-	width:90%;
-	}
-  div.gallery{
-  width:45%}
-  }
-  word{
-  width:45%;
-  }
-  
-   @media screen and (max-width:600px){
-   .omg{
-   width:90%;
-   }
-  div.gallery{
-  width:90%}
-  nav>.menu{
-  display:none;
-  }
-  .icon{
-  display:block;
-  }
-  .burgermenu{
-  display:block;
-  }
-  
-  }
+@media screen and (max-width:1200px){
+					.photot{
+						width:90%;
+						}
+					div.gallery{
+						width:45%}
+						}
+					
+@media screen and (max-width:600px){
+					.photot{
+						width:90%;
+						}
+						
+					div.gallery{
+							width:90%
+								}
+					
+					.icon{
+						display:block;
+							}
+							
+					.list{
+						display:none;
+						}
   
   
 </style>
 </head>
 <body>
-<nav>
-	<div class="my">My Website</div>
+<div class="my">My Website</div>
+<div class="list">
 	<div class="menu">item1</div>
 	<div class="menu">item2</div>
 	<div class="menu">item3</div>
 	<div class="menu">item4</div>
-	</nav>
+</div>
 	
 	<div class="icon">
 	<div class="icon2"></div>
@@ -128,38 +124,38 @@
 	
 	
 
-<div class="up">Welcome to MyHome</div>
-<div class="omg">
+<div class="up">Welcome to MyHome</div>  
+<div class="photot">
 <div class="gallery">
-	<img src="https://inews.gtimg.com/newsapp_bt/0/9963183961/1000" width="600" height="400">
+	<img src="https://inews.gtimg.com/newsapp_bt/0/9963183961/1000">
 	<div class="desc">河鉉雨</div>
 </div>
 <div class="gallery">
-	<img src="https://mummumzine.files.wordpress.com/2016/10/e6b885e7b494e5bcb5e99ba8e7949f.jpg?w=940" width="600" height="400">
+	<img src="https://mummumzine.files.wordpress.com/2016/10/e6b885e7b494e5bcb5e99ba8e7949f.jpg?w=940">
 	<div class="desc">張雨生</div>
 </div>
 <div class="gallery">
-	<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/00000-1583332055.jpg?crop=0.502xw:1.00xh;0,0&resize=640:*" width="600" height="400">
+	<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/00000-1583332055.jpg?crop=0.502xw:1.00xh;0,0&resize=640:*">
 	<div class="desc">權娜拉</div>
 </div>
 <div class="gallery">
-	<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/page-1608106032.jpg?crop=0.497xw:0.993xh;0.503xw,0.00656xh&resize=640:*" width="600" height="400">
+	<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/page-1608106032.jpg?crop=0.497xw:0.993xh;0.503xw,0.00656xh&resize=640:*">
 	<div class="desc">金世正</div>
  </div>
 <div class="gallery"> 
-	<img src="https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5ea87c81c371c.jpg" width="600" height="400">
+	<img src="https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5ea87c81c371c.jpg">
 	<div class="desc">麥可喬丹</div>
 </div>	
 <div class="gallery">  
-	<img src="https://hips.hearstapps.com/amv-prod-elletw.s3.amazonaws.com/new-dossier/_1_60335.jpg?resize=480:*" width="600" height="400">
+	<img src="https://hips.hearstapps.com/amv-prod-elletw.s3.amazonaws.com/new-dossier/_1_60335.jpg?resize=480:*">
 	<div class="desc">傑克葛倫霍</div>
 </div>	
 <div class="gallery"> 
-	<img src="https://runrun.com.hk/wp-content/uploads/2019/09/image001-9-1024x684.png" width="600" height="400">
+	<img src="https://runrun.com.hk/wp-content/uploads/2019/09/image001-9-1024x684.png">
 	<div class="desc">肯納尼薩·貝克勒</div>
 </div>	
 <div class="gallery">  
-	<img src="https://5b0988e595225.cdn.sohucs.com/images/20180227/4fe76f2d77ce463e824dbee7ad71b32e.jpeg" width="600" height="400">
+	<img src="https://5b0988e595225.cdn.sohucs.com/images/20180227/4fe76f2d77ce463e824dbee7ad71b32e.jpeg">
 	<div class="desc">李連杰</div>
 </div>
 </div>
