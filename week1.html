@@ -8,6 +8,35 @@
 .up{
   background-color:#00E3E3;font-size:40px;text-align:center;height:300px;line-height:300px;
   }
+  .icon{
+	position:absolute;top:0px;right:0px;
+	height:30px;
+	display:none;
+	}
+	.icon2{
+	background-color:#FFAF60;
+	width:25px;
+	height:3px;
+	margin:5px;
+	}
+	.burgermenu{
+	
+	background-color: #ffffff;
+	height: 80px;
+	width: 20px;
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	
+	
+	}
+	#nothing:checked ~ .burgermenu{
+	transform: translateX(100%);
+	}
+	#nothing{
+	
+	}
+
 
   nav{
 	display:flex;
@@ -60,6 +89,13 @@
   nav>.menu{
   display:none;
   }
+  .icon{
+  display:block;
+  }
+  .burgermenu{
+  display:block;
+  }
+  
   }
   
   
@@ -73,8 +109,24 @@
 	<div class="menu">item3</div>
 	<div class="menu">item4</div>
 	</nav>
-
-
+	
+	<div class="icon">
+	<div class="icon2"></div>
+	<div class="icon2"></div>
+	<div class="icon2"></div>
+	</div>
+	
+	<ul class="burgermenu">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<input type="checkbox" name="nothing" id="nothing">
+	<label for="nothing" class="icon"><div class="icon2"></div></label>
+	
+	
+	
 
 <div class="up">Welcome to MyHome</div>
 <div class="omg">
