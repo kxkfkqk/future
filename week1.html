@@ -6,8 +6,13 @@
 <title>第一週功課</title>
 <style type="text/css">
 .up{				/* 大框框主題*/
+	
 	background-color:#00E3E3;font-size:40px;text-align:center;height:300px;line-height:300px;
+	width:100%;
 		}
+body{
+	margin:0;
+	}
 		
 .icon{      /* 漢堡選單容器 */
 		position:absolute;top:0px;right:0px;
@@ -40,7 +45,7 @@
 			}
 
 .list{     /*漢堡前清單容器*/
-		position:absolute;top:7px;right:0px;
+		position:absolute;top:0px;right:0px;
 		display:flex;
 		}
 		
@@ -52,15 +57,18 @@
 .photot{		/*  照片容器 */
 		width:1200px;
 		margin-right:auto;margin-left:auto;
+		
 		}
 div.gallery{		/* 連結文字及圖片的容器*/
 			margin:5px;
 			float:left;		/* 沒有滿的情況會在同一行且靠左*/
 			width:290px;
+			height:240px;	/*此為設定整體區塊高度,並非為圖片高度*/
+			
 			}
 div.gallery img{		/* 圖片使尺寸設定 */
 				width:100%;
-				height:200px;
+				height:190px
 				}
 div.desc{			/* 文字設定 */
 			margin-top:-5px;
@@ -71,27 +79,46 @@ div.desc{			/* 文字設定 */
  
 @media screen and (max-width:1200px){
 					.photot{
-						width:90%;}
+						width:90%;
+						}
 					div.gallery{
-						width:48%}
+						width:45%;
+						height:auto;
+						
+						
+						}
+					div.gallery img{
+						
+						
+						object-fit:cover;
+		
+						}
 						}
 					
 @media screen and (max-width:600px){
 					.photot{
-						width:90%;}
+						width:90%;
+						}
+						
 					div.gallery{
-						width:90%;}
+							width:90%
+							
+								}
+					
 					.icon{
-						display:block;}
+						display:block;
+							}
+							
 					.list{
 						display:none;}
-					.up{
-						font-size:35px;}
 						}
-							
-
-					
-		
+@media screen and (max-width:390px){
+					.up{
+						font-size:35px;
+						}
+						}
+  
+  
 </style>
 </head>
 <body>
@@ -102,22 +129,25 @@ div.desc{			/* 文字設定 */
 	<div class="menu">item3</div>
 	<div class="menu">item4</div>
 </div>
+	
 	<div class="icon">
 	<div class="icon2"></div>
 	<div class="icon2"></div>
 	<div class="icon2"></div>
-</div>
+	</div>
 	
-<ul class="burgermenu">
-	<li>item1</li>
-	<li>item2</li>
-	<li>item3</li>
-	<li>item4</li>
-</ul>
+	<ul class="burgermenu">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<input type="checkbox" name="nothing" id="nothing">
+	<label for="nothing" class="icon"><div class="icon2"></div></label>
 	
-<input type="checkbox" name="nothing" id="nothing">
-<label for="nothing" class="icon"><div class="icon2"></div></label>
 	
+	
+
 <div class="up">Welcome to MyHome</div>  
 <div class="photot">
 <div class="gallery">
@@ -135,13 +165,13 @@ div.desc{			/* 文字設定 */
 <div class="gallery">
 	<img src="https://www.voguehk.com/media/2020/12/1027%E6%9B%B4%E6%96%B0-4.jpg">
 	<div class="desc">金世正</div>
- </div>
+</div>
 <div class="gallery"> 
 	<img src="https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5ea87c81c371c.jpg">
 	<div class="desc">麥可喬丹</div>
 </div>	
 <div class="gallery">  
-	<img src="https://lh3.googleusercontent.com/proxy/cVxC9v0Joxc3X-3uaoP8zLuq3sNRkDodca-KrVgVYw_jZDE3eybedHHm05YKVzcX5ExIqaOV3NwrBGj3nkHwHzJY28hIT8xgqzTEg9xIgWZ6TqfVn4BwVe7hmDuSrZV1-Q">
+	<img src="https://miro.medium.com/max/2680/1*ekcFHV4xB2BH5clLGpioLw@2x.jpeg">
 	<div class="desc">傑克葛倫霍</div>
 </div>	
 <div class="gallery"> 
@@ -156,3 +186,4 @@ div.desc{			/* 文字設定 */
  
 </body>
 </html>
+
