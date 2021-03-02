@@ -42,10 +42,14 @@ avg({
 
 function maxProduct(nums){
 function sortNum(a,b){							// 按照大小順序排列的語法
-return a-b;										// 按照大小順序排列的語法
-}												// 按照大小順序排列的語法
+return a-b;								// 按照大小順序排列的語法
+}									// 按照大小順序排列的語法
 x=nums.sort(sortNum)							//按照大小順序排列的語法
-console.log(x[x.length-1]*x[x.length-2]);
+if (x[0]*x[1] > x[x.length-1]*x[x.length-2]){							
+	console.log(x[0]*x[1]);
+	}else{
+	console.log(x[x.length-1]*x[x.length-2])
+}
 }
 maxProduct([5,20,2,6]);
 maxProduct([10,-20,0,3]);
@@ -56,7 +60,6 @@ function twoSum(nums,target){
 	var anser=[];
 	for (i=0;i<nums.length;i++){
 		x=target-nums[i]
-		console.log(nums.indexOf(x))
 		if (nums.indexOf(x)>=0){
 			anser=anser.concat(i)
 		}else{
