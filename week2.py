@@ -5,6 +5,7 @@ def calculate(min,max):
     print(sum)
 calculate(1,3)
 calculate(4,8)
+
 def avg(data):
     sum=0
     people=data["count"]
@@ -29,9 +30,13 @@ avg({
         }
         ]
 })
+
 def maxProduct(nums):
     anser=sorted(nums)
-    print(anser[-1]*anser[-2])
+    if anser[0]*anser[1] > anser[-1]*anser[-2]:
+         print(anser[1]*anser[2])
+    else:
+        print(anser[-1]*anser[-2])
 maxProduct([5,20,2,6])
 maxProduct([10,-20,0,3])
 
