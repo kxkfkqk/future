@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta type="utf-8">
+<script type="text/javascript">
+function calculate(min,max){
+sum=0
+for(i=min;i<=max;i++){
+	sum+=i
+}
+console.log(sum)
+}
+calculate(1,3)
+calculate(4,8)
+
+function avg(data){
+people=data.count;
+var salary=0;
+for (i=0;i<=people-1;i++){
+money=data.employees[i].salary;				// 字典表示法
+salary+=money;
+}
+console.log(salary/people);
+}
+avg({
+    "count":3,
+    "employees":[
+        {
+                "name":"John",
+                "salary":30000
+        },
+        {
+                "name":"Bob",
+                "salary":60000
+        },
+        {
+                "name":"Jenny",
+                "salary":50000
+        }
+        ]
+})
+
+function maxProduct(nums){
+function sortNum(a,b){							// 按照大小順序排列的語法
+return a-b;										// 按照大小順序排列的語法
+}												// 按照大小順序排列的語法
+x=nums.sort(sortNum)							//按照大小順序排列的語法
+console.log(x[x.length-1]*x[x.length-2]);
+}
+maxProduct([5,20,2,6]);
+maxProduct([10,-20,0,3]);
+
+function twoSum(nums,target){
+	var x;
+	var y=0;
+	var anser=[];
+	for (i=0;i<nums.length;i++){
+		x=target-nums[i]
+		console.log(nums.indexOf(x))
+		if (nums.indexOf(x)>=0){
+			anser+=[i]
+		}else{
+			continue;
+		}
+		}
+	console.log([anser[0],anser[1]])
+}
+
+result=twoSum([2,11,7,15],9)
+console.log(result)
+
+function maxZeros(nums){
+	var sum=0;
+	var anser=[];
+	for(i=0;i<nums.length;i++){
+		if (nums[i]==0){
+			sum+=1
+		}else{
+			anser=anser.concat([sum])   // 串列的相加語法
+			sum=0
+	}
+	}
+	anser=anser.concat([sum])	
+	console.log(Math.max(...anser))  // 找出最大值語法
+	
+}
+maxZeros([0,1,0,0])
+maxZeros([1,0,0,0,0,1,0,1,0,0])
+maxZeros([1,1,1,1,1])
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
