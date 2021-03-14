@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>第一週功課</title>
 <style type="text/css">
-.up{				/* 大框框主題*/
+.up{							/* 大框框主題*/
 	background-color:#00E3E3;font-size:40px;text-align:center;height:300px;line-height:300px;margin-top:5px;
 	width:100%;
 }
@@ -15,18 +15,18 @@
 body{
 	margin:0;
 }		
-.icon{      /* 漢堡選單容器 */
+.icon{     					 /* 漢堡選單容器 */
 	position:absolute;top:0px;right:0px;
 	height:30px;
 	display:none;
 }
-.icon2{     /*  漢堡線 */
+.icon2{   					  /*  漢堡線 */
 	background-color:#FFAF60;
 	width:25px;
 	height:3px;
 	margin:5px;
 }	
-.burgermenu{    /*  漢堡後清單  */
+.burgermenu{    				/*  漢堡後清單  */
 	display:none;
 	background-color: #ffffff;
 	height: 80px;
@@ -38,32 +38,33 @@ body{
 	/* #nothing:checked ~ .burgermenu{
 	transform: translateX(100%);
 	} */
-#nothing{   		/* 隱藏checkbox*/
+#nothing{   					/* 隱藏checkbox*/
 	display:none;
 }
-.list{     /*漢堡前清單容器*/
+.list{    					 /*漢堡前清單容器*/
 	position:absolute;top:5px;right:0px;
 	display:flex;
 }		
-.menu{		/*漢堡前清單*/
+.menu{						/*漢堡前清單*/
 	justify-content:end;
 	width:50px;
 }	
-#photot{		/*  照片容器 */
+#photot{					/*  照片容器 */
 	width:1200px;
 	display:flex;flex-wrap:wrap;
 	margin-right:auto;margin-left:auto;
+	position: relative;top:10px;
 }
-#photot>.gallery{		/* 連結文字及圖片的容器*/
+#photot>.gallery{				/* 連結文字及圖片的容器*/
 	margin:5px;
 	width:290px;
-	height:240px;	/*此為設定整體區塊高度,並非為圖片高度*/
+	height:240px;				/*此為設定整體區塊高度,並非為圖片高度*/
 }
-.gallery img{		/* 圖片使尺寸設定 */
+.gallery img{					/* 圖片使尺寸設定 */
 	width:100%;
 	height:190px
 }
-.gallery>.desc{			/* 文字設定 */
+.gallery>.desc{					/* 文字設定 */
 	margin-top:-5px;height:25px;
 	padding:15px;
 	text-align:center;
@@ -114,36 +115,33 @@ body{
 <script type="text/javascript">
 
 function get(i){
-		let div=document.createElement("div");        	// 創建新的div				
-		let mewdiv=document.getElementById("photot");  	// 指定要塞的父親節點		
-		mewdiv.appendChild(div); 						// 塞						
+		let div=document.createElement("div");        		// 創建新的div				
+		let mewdiv=document.getElementById("photot");  		// 指定要塞的父親節點		
+		mewdiv.appendChild(div); 				// 塞						
 		div.setAttribute("id","gallery"+i);  			// 賦予所創造的div的id		
-		div.className="gallery";						//賦予所創造的class選擇器		
-        
-        
+		div.className="gallery";				//賦予所創造的class選擇器		
         let src="https://padax.github.io/taipei-day-trip-resources/taipei-attractions.json?fbclid=IwAR1er6RmImIlBl_H1XYQ7yI_ni2w-ppnw1iMs6ABq0ZFasJZ9toSwn7pFBg";	//要將載入的網頁語法 start
-        fetch(src).then(function(response){										// 載入網頁的語法
-            return response.json();												//將載入網頁的格式變成json
-        }).then(function(result){												//載入網頁語法 以下為擷取內容
-			let p=result["result"]["results"][i]["file"];
-			let pattern=document.createElement("img");					//創立一個新圖片元素           
+        fetch(src).then(function(response){								// 載入網頁的語法
+            return response.json();									//將載入網頁的格式變成json
+        }).then(function(result){									//載入網頁語法 以下為擷取內容
+		let p=result["result"]["results"][i]["file"];
+		let pattern=document.createElement("img");			//創立一個新圖片元素           
         	let newpattern=document.getElementById("gallery"+i);   		//設定圖片要塞入新創的div				
-			pattern.src="http"+p.split("http")[1];						// 設定好圖片之網址				
-			newpattern.appendChild(pattern);							// 將圖片塞進所指定的地點	       
+		pattern.src="http"+p.split("http")[1];				// 設定好圖片之網址				
+		newpattern.appendChild(pattern);				// 將圖片塞進所指定的地點	       
 
-			let w=result["result"]["results"][i]["stitle"];
-			let newword=document.getElementById("gallery"+i);   //設定文字要塞入新創的div						
-            let word=document.createElement("div");				//創立文字標籤
-			let node=document.createTextNode(w);				//指定文字內容
-			word.appendChild(node);								//將文字塞入所創立之標籤
-            word.className="desc";								//賦予class選擇器
-            newword.appendChild(word);							//將文字塞入所指定地點
-									
+		let w=result["result"]["results"][i]["stitle"];
+		let newword=document.getElementById("gallery"+i);   		//設定文字要塞入新創的div						
+            	let word=document.createElement("div");				//創立文字標籤
+		let node=document.createTextNode(w);				//指定文字內容
+		word.appendChild(node);						//將文字塞入所創立之標籤
+            	word.className="desc";						//賦予class選擇器
+            	newword.appendChild(word);					//將文字塞入所指定地點					
         });                             
     }
 var clicks=0;
 function start(clicks){ 
-		let i = clicks*8;
+	let i = clicks*8;
         while(i < 8*(clicks+1)){         
             get(i);
             i++;
