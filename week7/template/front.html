@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style type="text/css">
+.outside{ 
+    height:300px;line-height:300px;
+    background-color: #FFD306;
+    text-align:center;
+}
+.inside{
+    font-size: 50px;
+}
+.button{
+    position:relative;top:50px;left:20px;
+}
+#information{
+    position:relative;top:20px;left:20px;
+}
+.information2{
+    position:relative;top:20px;left:20px;
+}
+.outside2{
+    width:220px;
+	display:flex;flex-wrap:wrap;
+    position:relative;top:50px;
+    
+}
+.inside{
+    margin:15px;
+}
+</style>
+
+<script type="text/javascript">
+var check = 0;
+function hide(check){
+    let hide = document.getElementById("p")
+    if (check % 2 == 0){
+        hide.type = "password"                                 //將type設成password可使密碼隱藏
+    }
+    else if(check % 2 == 1){
+        hide.type = "text"                                     //將type設成text顯示原貌
+    }
+    else if (check == 1.5){
+        document.getElementById("information").reset();
+    }
+}
+function cancel(){
+    
+
+        document.getElementById("information").reset();        //將內容物清空之語法
+}
+function count(){
+    check+=1;
+    hide(check);
+}
+</script>
+</head>
+<body style = "margin:0px;" onload = "hide(check);">
+    <div class = "outside">
+        <a class = "inside">登入功能測試</a>
+    </div>
+
+    <form action = "/signin" id = "information" method = "POST">
+        帳號<input type = "text" id = "a", name = "x">
+        密碼<input type = "text" id = "p", name = "y">
+        <button>登入</button> 
+    </form>
+
+    <div class="button">
+        <button onclick = "hide(1.5);">取消</button>
+        <button onclick = "count();">顯示/隱藏-密碼</button>
+    </div>
+    <div style = "font-size:20px;position: relative;top:60px;left:80px;">會員註冊</div>
+    <div class = "outside2">
+    <form action = "/signup" class = "information2" method = "POST">
+        姓名<input type = "text" name = "n">
+        帳號<input type = "text" name = "a">
+        密碼<input type = "text" name = "p">
+        <button>註冊</button>
+    </form>
+    </div>
+</body>
+</html>
