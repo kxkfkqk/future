@@ -6,7 +6,7 @@ app=Flask(__name__)
 app.config["JSON_AS_ASCII"]=False
 app.config["TEMPLATES_AUTO_RELOAD"]=True
 
-db = pymysql.connect(host = "localhost", user = "root", password = "Lqsym233!", database = "website")
+db = pymysql.connect(host = "localhost", user = "root", password = "lqsym233", database = "website")
 cursor = db.cursor()
 
 # Pages
@@ -24,7 +24,6 @@ def thankyou():
 	return render_template("thankyou.html")
 @app.route("/api/attractions")
 def attractions():
-	imgages = []
 	alldata = []
 	end = 12
 	page = int(request.args.get("page"))
@@ -44,8 +43,8 @@ def attractions():
 	if keyword == None:
 		try:
 			for j in range(page, (page + end)):
-				j = str(j)
-				url = """SELECT * FROM img WHERE NO = '%s'"""%(j)
+				imgages = []
+				url = """SELECT * FROM img WHERE no = '%s'"""%(j)
 				cursor.execute(url)
 				results = cursor.fetchall()
 				for k in results:
@@ -105,6 +104,7 @@ def attractions():
 				mrt = i[6]
 				latitude = i[7]
 				longitude = i[8]
+				imgages = []
 				url = """SELECT * FROM img WHERE no = '%s'"""%(ide)
 				cursor.execute(url)
 				res = cursor.fetchall()
