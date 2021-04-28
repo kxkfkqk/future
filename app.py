@@ -9,7 +9,7 @@ app.config["TEMPLATES_AUTO_RELOAD"]=True
 db = pymysql.connect(host = "localhost", user = "root", password = "Lqsym233!", database = "website")
 cursor = db.cursor()
 
-# Pages
+# Pages test
 @app.route("/")
 def index():
 	return render_template("index.html")
