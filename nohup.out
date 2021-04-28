@@ -1,0 +1,19 @@
+python3: can't open file 'app,py': [Errno 2] No such file or directory
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:3000/ (Press CTRL+C to quit)
+49.159.248.50 - - [28/Apr/2021 12:53:55] "[37mGET /api/attractions?page=5 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:03] "[37mGET /api/attraction/5 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:08] "[37mGET /api/attraction/77 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:20] "[37mGET /api/attraction/61 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:24] "[37mGET /api/attraction/200 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:32] "[37mGET /api/attractions?page=5 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:36] "[37mGET /api/attractions?page=15 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:40] "[37mGET /api/attractions?page=16 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:54:59] "[37mGET /api/attractions?page=16&keyword=藝術 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:55:03] "[37mGET /api/attractions?page=1&keyword=藝術 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:55:06] "[37mGET /api/attractions?page=0&keyword=藝術 HTTP/1.1[0m" 200 -
+49.159.248.50 - - [28/Apr/2021 12:55:27] "[37mGET /api/attraction/229 HTTP/1.1[0m" 200 -
