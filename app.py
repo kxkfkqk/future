@@ -142,7 +142,7 @@ def attractions():
 					"message":"資料錯誤"
 				},ensure_ascii = False)
 	
-@app.route("/api/attractions/<number>")
+@app.route("/api/attraction/<number>")
 def attractions2 (number):
 	x = []
 	try:
