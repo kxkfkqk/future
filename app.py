@@ -24,7 +24,6 @@ def thankyou():
 	return render_template("thankyou.html")
 @app.route("/api/attractions")
 def attractions():
-	imgages = []
 	alldata = []
 	end = 12
 	page = int(request.args.get("page"))
@@ -44,8 +43,8 @@ def attractions():
 	if keyword == None:
 		try:
 			for j in range(page, (page + end)):
-				j = str(j)
-				url = """SELECT * FROM img WHERE NO = '%s'"""%(j)
+				imgages = []
+				url = """SELECT * FROM img WHERE no = '%s'"""%(j)
 				cursor.execute(url)
 				results = cursor.fetchall()
 				for k in results:
@@ -105,6 +104,7 @@ def attractions():
 				mrt = i[6]
 				latitude = i[7]
 				longitude = i[8]
+				imgages = []
 				url = """SELECT * FROM img WHERE no = '%s'"""%(ide)
 				cursor.execute(url)
 				res = cursor.fetchall()
@@ -142,8 +142,9 @@ def attractions():
 					"message":"資料錯誤"
 				},ensure_ascii = False)
 	
-@app.route("/api/attractions/<number>")
-def attractions2 (number):
+
+@app.route("/api/attraction/<number>")
+def attractions2(number):
 	x = []
 	try:
 		url = """SELECT * FROM img WHERE NO = '%s'"""%(number)
